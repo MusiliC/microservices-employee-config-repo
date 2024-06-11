@@ -6,6 +6,11 @@ spring:
           uri: lb://DEPARTMENT-SERVICE
           predicates:
           - Path=/api/departments/**
+
+        - id: employee-service
+          uri: lb://EMPLOYEE-SERVICE
+          predicates:
+            - Path=/api/employees/**
         
 server:
   port: 7000
